@@ -4,6 +4,7 @@ import "./globals.css";
 
 import { ThemeProvider } from "@/components/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { ContactDialogProvider } from "@/components/contact-dialog";
 
 const nunito = Nunito({
   variable: "--font-nunito",
@@ -35,7 +36,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           enableSystem
           disableTransitionOnChange
         >
-          <TooltipProvider>{children}</TooltipProvider>
+          <TooltipProvider>
+            <ContactDialogProvider>{children}</ContactDialogProvider>
+          </TooltipProvider>
         </ThemeProvider>
       </body>
     </html>

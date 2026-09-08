@@ -1,3 +1,5 @@
+"use client"
+
 import { ArrowUpRight, Mail, MapPin } from "lucide-react"
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
@@ -6,10 +8,13 @@ import { Separator } from "@/components/ui/separator"
 import { SiteHeader } from "@/components/site-header"
 import { ProjectCard } from "@/components/project-card"
 import { GithubIcon } from "@/components/icons"
+import { useContactDialog } from "@/components/contact-dialog"
 import { profile } from "@/lib/profile"
 import { projects } from "@/lib/projects"
 
 export default function Home() {
+  const openContactDialog = useContactDialog()
+
   return (
     <>
       <SiteHeader />
@@ -35,11 +40,7 @@ export default function Home() {
                 <GithubIcon className="size-4" />
                 GitHub
               </Button>
-              <Button
-                variant="outline"
-                nativeButton={false}
-                render={<a href={`mailto:${profile.email}`} />}
-              >
+              <Button variant="outline" onClick={openContactDialog}>
                 <Mail />
                 Me contacter
               </Button>
@@ -94,7 +95,7 @@ export default function Home() {
             N&apos;hésitez pas à me contacter.
           </p>
           <div className="mt-6 flex flex-wrap items-center gap-2">
-            <Button nativeButton={false} render={<a href={`mailto:${profile.email}`} />}>
+            <Button onClick={openContactDialog}>
               <Mail />
               {profile.email}
             </Button>
