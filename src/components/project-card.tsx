@@ -53,7 +53,7 @@ export function ProjectCard({ project }: { project: Project }) {
                 <a href={project.demoUrl} target="_blank" rel="noreferrer" />
               }
             >
-              Démo
+              {project.demoLabel ?? "Démo"}
               <ArrowUpRight />
             </Button>
           )}

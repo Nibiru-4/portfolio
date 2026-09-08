@@ -5,6 +5,7 @@ export type Project = {
   language: string | null
   repoUrl: string
   demoUrl?: string
+  demoLabel?: string
   featured?: boolean
 }
 
@@ -24,6 +25,8 @@ export const projects: Project[] = [
     description: "Mod Minecraft écrit en Java.",
     language: "Java",
     repoUrl: "https://github.com/Nibiru-4/Mod-CRS",
+    demoUrl: "https://modrinth.com/mod/schedulecraft",
+    demoLabel: "Modrinth",
     featured: true,
   },
   {
