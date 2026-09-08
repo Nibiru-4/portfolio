@@ -69,18 +69,4 @@ export const projects: Project[] = [
     language: "JavaScript",
     repoUrl: "https://github.com/Nibiru-4/LeVoyageur",
   },
-  {
-    slug: "aoc-2024",
-    title: "Advent of Code 2024",
-    description: "Résolutions des énigmes quotidiennes de l'Advent of Code 2024.",
-    language: "JavaScript",
-    repoUrl: "https://github.com/Nibiru-4/AOC2K24",
-  },
-  {
-    slug: "aoc-2022",
-    title: "Advent of Code 2022",
-    description: "Résolutions des énigmes quotidiennes de l'Advent of Code 2022.",
-    language: "JavaScript",
-    repoUrl: "https://github.com/Nibiru-4/AOC2K22",
-  },
 ]
