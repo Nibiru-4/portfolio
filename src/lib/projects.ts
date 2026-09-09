@@ -45,7 +45,7 @@ export const projects: Project[] = [
       "Simulateur de draft pour League of Legends construit avec Next.js et l'API Riot Games.",
     language: "TypeScript",
     repoUrl: "https://github.com/Nibiru-4/Blinded",
-    demoUrl: "https://blinded-sigma.vercel.app",
+    demoUrl: "https://blinded.axem.me",
     featured: true,
   },
   {
